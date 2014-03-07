@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(name='django_openshift',
       version='1.0',
-      description='My djang oapp flying on openshift ',
+      description='My django app flying on openshift ',
       author='Nikola Marcetic',
       author_email='nikola.marcetic@ntsystems.rs',
       url='http://djangoapp-nmarcetic.rhcloud.com/',

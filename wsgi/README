@@ -9,10 +9,3 @@
     pip install -r requirements.txt
 
         
-
-Your application 'djangoapp' is now available.
-
-  URL:        http://djangoapp-nmarcetic.rhcloud.com/
-  SSH to:     5319c61fe0b8cdd543000004@djangoapp-nmarcetic.rhcloud.com
-  Git remote: ssh://5319c61fe0b8cdd543000004@djangoapp-nmarcetic.rhcloud.com/~/git/djangoapp.git/
-  Cloned to:  /home/nmarcetic/PJ/Web/django_openshift/djangoapp
