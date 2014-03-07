@@ -1,4 +1,4 @@
-django_openshift
+Django_OpenShift
 ===========
 
 Django ready project structure for OpenShift.
@@ -26,7 +26,7 @@ $ source python/virtenv/bin/activate
 
 cd app-root/runtime/repo/wsgi
 
-python manage.py --noinput
+python manage.py syncdb --noinput
 
 **All static files are located at wsgi/static , djago-compressor will also copy all js and css files to wsgi/static/resources.**
 
@@ -34,7 +34,7 @@ python manage.py --noinput
 
 TODO: fix this :) , implement grunt task runner!
 
-You can create .httaccess file in 
+You can create .httaccess in wsgi directory.
 
 **Deploy to OpenShift**
 
@@ -59,3 +59,6 @@ $ source python/virtenv/bin/activate
 cd app-root/runtime/repo/wsgi
 
 4. python manage.py shell (or syncdb , migrate etc...)
+
+
+** READ OpenShift doc and blog for more info**
