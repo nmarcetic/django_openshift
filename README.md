@@ -8,13 +8,9 @@ Django ready project structure for OpenShift.
 - Twitter bootstrap.
 - django-compressor.
 
-**Create new app on OpenShift (require OpenShift rhc tool).**
+**My Django app on OpenShift**
 
-rhc app create -t python-2.7 -a thenameofyourapp
-
-**add DB support (replace postgresql-9.2 with your db, see the db support list).**
-
-rhc cartridge add postgresql-9.2 -a thenameofyourapp
+Read OpenShift doc for rhc tool and how to push PJ with git.
 
 **Go to settings config and def db parameters (settings/prod.py)**
 
@@ -61,4 +57,4 @@ cd app-root/runtime/repo/wsgi
 4. python manage.py shell (or syncdb , migrate etc...)
 
 
-** READ OpenShift doc and blog for more info**
+**READ OpenShift doc and blog for more info**
