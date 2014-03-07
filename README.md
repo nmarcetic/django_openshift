@@ -1,7 +1,7 @@
 django_openshift
 ===========
 
-Django ready project structure for openshift.
+Django ready project structure for OpenShift.
 
 - Django with REST service (session and token auth).
 - AngularJS (service/controllers/routing/animate).
@@ -23,12 +23,15 @@ rhc cartridge add postgresql-9.2 -a thenameofyourapp
 **Sync db**
 
 $ source python/virtenv/bin/activate
+
 cd app-root/runtime/repo/wsgi
+
 python manage.py --noinput
 
-**All static files are located at wsgi/static , djago-compressor will also copy all js and css files to wsgi/static/resources. **
+**All static files are located at wsgi/static , djago-compressor will also copy all js and css files to wsgi/static/resources.**
 
-**You can manually copy all your other static files like fonts, etc... to wsgi/static/ , so wsgi can serve to clients. **
+**You can manually copy all your other static files like fonts, etc... to wsgi/static/ , so wsgi can serve to clients.**
+
 TODO: fix this :) , implement grunt task runner!
 
 You can create .httaccess file in 
@@ -44,7 +47,9 @@ git commit -m "my app init commit."
 gut push
 
 **If you need a shell**
+
 1. ssh to your OpenShift app
+
 2. Activate virtualenv 
 
 $ source python/virtenv/bin/activate
