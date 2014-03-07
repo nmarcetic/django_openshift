@@ -1,0 +1,44 @@
+{% load sekizai_tags %}
+{% load compress %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block page_title %}{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Django SPA!">
+    <meta name="keywords" content="some keywords">
+    {% render_block "css" postprocessor "compressor.contrib.sekizai.compress" %}
+    {% addtoblock "css" %}
+    <link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}css/app.css" rel="stylesheet">
+    {% endaddtoblock %}
+    {% addtoblock "js" %}
+    <script src="{{ STATIC_URL }}js/libs/jquery-1.11.0.min.js"></script>
+    <script src="{{ STATIC_URL }}js/libs/bootstrap.min.js"></script>
+    <script src="{{ STATIC_URL }}js/libs/angular.min.js"></script>
+    <script src="{{ STATIC_URL }}js/libs/angular-route.min.js"></script>
+    <script src="{{ STATIC_URL }}js/app/service.js"></script>
+    <script src="{{ STATIC_URL }}js/app/controllers.js"></script>
+    <script src="{{ STATIC_URL }}js/app/app.js"></script>
+    {% endaddtoblock %}
+</head>
+<body ng-app="django-service">
+  <div class="container-fluid">
+    {% block header %}
+    <div class="row">
+      <div class="span12">
+        <h1 id="hello-msg"> Hello django!</h1>
+</div>
+</div>
+{% endblock %}
+{% block content %}
+<div class="container"></div>
+{% endblock %}
+{% block bottom %}
+{% endblock %}
+{# render js fast page loading #}
+{% render_block "js" postprocessor "compressor.contrib.sekizai.compress" %}
+</body>
+</html>

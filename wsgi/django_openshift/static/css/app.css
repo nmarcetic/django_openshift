@@ -1,0 +1,14 @@
+body {
+	padding: 30px 0 0 0;
+}
+#hello-msg {
+	text-align: center;
+	color: grey;
+	padding: 20px;
+	font-weight: 300;
+}
+#ping-msg {
+	padding: 8px;
+	font-size: 15px;
+
+}

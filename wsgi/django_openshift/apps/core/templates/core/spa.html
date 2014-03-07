@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load sekizai_tags %}
+{% block page_title %}Single page app{% endblock %}
+<!DOCTYPE html>
+{% block content %}
+<div class="container" ng-app="django-service">
+	{# Stop Django template rendering #}
+	{% verbatim %}    
+	<ng-view></ng-view>
+	{% endverbatim %}
+</div>
+{% endblock %}
